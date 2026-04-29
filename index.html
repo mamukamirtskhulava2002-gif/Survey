@@ -11,72 +11,85 @@
 
     <p id=description>This survey is about technology and learning. It aims to understand what people are studying, how much time they spend learning, and their goals in the tech field. </p>
 
-    <form id=survey-form action="https://formspree.io/f/mqewowlw" method="POST">
-<label id="name-label" for="name">Name:</label>
-<input id="name" type="text" required placeholder="Enter your name">
+    <form id="survey-form" action="https://formspree.io/f/mqewowlw" method="POST">
 
-<label id="email-label" for="email">Email:</label>
-<input id="email" type="email" required placeholder="Enter your email">
+  <!-- NAME -->
+  <label id="name-label" for="name">Name:</label>
+  <input id="name" name="name" type="text" required placeholder="Enter your name">
 
-<label id="number-label" for="number">Age:</label>
-<input id="number" type="number" min="10" max="100" placeholder="Enter your age">
+  <!-- EMAIL -->
+  <label id="email-label" for="email">Email:</label>
+  <input id="email" name="email" type="email" required placeholder="Enter your email">
 
-<p>Which option best describes your current role?</p>
+  <!-- AGE -->
+  <label id="number-label" for="number">Age:</label>
+  <input id="number" name="age" type="number" min="10" max="100" placeholder="Enter your age">
 
-<select id=dropdown>
+  <!-- ROLE -->
+  <label for="dropdown">Current role:</label>
+  <select id="dropdown" name="role">
+    <option disabled selected>Select your role</option>
+    <option value="student">Student</option>
+    <option value="developer">Developer</option>
+    <option value="designer">Designer</option>
+    <option value="self_taught">Self-taught learner</option>
+    <option value="other">Other</option>
+  </select>
 
-<option disabled selected>Select your role</option>
-<option value=student>Student</option>
-<option value=developer>Developer</option>
-<option value=designer>Designer</option>
-<option value=self_taught>Self-taught learner</option>
-<option value=other>Other</option>
+  <!-- EXPERIENCE -->
+  <p>Experience level:</p>
 
-</select>
+  <label>
+    <input type="radio" name="experience" value="beginner">
+    Beginner
+  </label>
 
-<p>What is your experience level?</p>
+  <label>
+    <input type="radio" name="experience" value="intermediate">
+    Intermediate
+  </label>
 
-<div>
+  <label>
+    <input type="radio" name="experience" value="advanced">
+    Advanced
+  </label>
 
-<input type="radio" id="beginner" name="experience" value="beginner">
-<label for="beginner">Beginner</label>
-
-
-<input type="radio" id="intermediate" name="experience" value="intermediate">
-<label for="intermediate">Intermediate</label>
-
-  <input type="radio" id="advanced" name="experience" value="advanced">
-  <label for="advanced">Advanced</label>
-
-</div>  
-
-<div>
-
+  <!-- RESOURCES -->
   <p>Learning resources:</p>
 
-<input type="checkbox" id="youtube" name="resources" value="youtube">
-<label for="youtube">YouTube</label>
+  <label>
+    <input type="checkbox" name="resources" value="youtube">
+    YouTube
+  </label>
 
-<input type="checkbox" id="online_courses" name="resources" value="online_courses">
-<label for="online_courses">Online courses</label>
+  <label>
+    <input type="checkbox" name="resources" value="online_courses">
+    Online courses
+  </label>
 
-<input type="checkbox" id="books" name="resources" value="books">
-<label for="books">Books</label>
+  <label>
+    <input type="checkbox" name="resources" value="books">
+    Books
+  </label>
 
-<input type="checkbox" id="practice_projects" name="resources" value="Practice_projects">
-<label for="practice_projects">Practice projects</label>
+  <label>
+    <input type="checkbox" name="resources" value="practice_projects">
+    Practice projects
+  </label>
 
-<input type="checkbox" id="school_/_university" name="resources" value="school_/_university">
-<label for="school_/_university">School / university</label>
+  <label>
+    <input type="checkbox" name="resources" value="school_university">
+    School / university
+  </label>
 
-</div>
+  
+  <!-- COMMENTS -->
+  <p><label for="comments">Additional comments:</label></p>
+  <p><textarea id="comments" name="comments" placeholder="Enter your comments"></textarea></p>
 
+  <!-- SUBMIT -->
+  <button id="submit" type="submit">Submit</button>
 
-
-  <label for="comments">Additional comments:</label>
- <p> <textarea id="comments" name="comments" placeholder="Enter your comments"></textarea></p>
-
-<button id="submit" type="submit">Submit</button>
-    </form>
+</form>
   </body>
-</html>
+</html> 
